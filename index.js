@@ -12,23 +12,6 @@ const _data = require("./lib/data")
 const handler = require("./lib/handlers")
 const helpers = require("./lib/helpers")
 
-// _data.create('tests', "users", {"name" : "holla"}, (err) => {
-//     console.log(err)
-// })
-
-// _data.read('tests', "users", function(err, data) {
-//     console.log("this is the error", err, " and this is the data" , data)
-// })
-
-
-// _data.update('tests', "users", {"name" : "pop"}, (err) => {
-//         console.log(err)
-// })
-
-// _data.delete("tests", "users", function(err){
-//     console.log(err)
-// })
-
 
 // http server logic
 const httpServer = http.createServer(function(req, res) {
@@ -139,5 +122,7 @@ const commonServer = function(req, res){
 // router 
 const router = {
     ping : handler.ping,
-    users : handler.users
+    users : handler.users,
+    tokens : handler.tokens,
+    checks : handler.checks
 }
